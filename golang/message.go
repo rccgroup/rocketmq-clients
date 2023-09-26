@@ -270,6 +270,14 @@ func fromProtobuf_MessageView2(message *v2.Message, messageQueue *v2.MessageQueu
 	return mv
 }
 
+func (mv *MessageView) SetMessageId(messageId string) {
+	mv.messageId = messageId
+}
+
+func (mv *MessageView) SetEndpoints(endpoints *v2.Endpoints) {
+	mv.endpoints = endpoints
+}
+
 func (mv *MessageView) isCorrupted() bool {
 	return mv.corrupted
 }
